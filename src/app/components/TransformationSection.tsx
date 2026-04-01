@@ -21,10 +21,11 @@ export function TransformationSection() {
       link: "https://t.me/ynvrcoz",
     },
     {
-      category: "Партнерство",
-      title: "Сотрудничество на следующую ИИчницу",
+      category: "Спецпроекты",
+      title: "SenseMakers",
+      description: "Прояснение сложных вызовов, доступ к сильной экспертной практике, больше смысла, меньше хаоса, сильнее курс в период перемен.",
       className: "col-span-1",
-      link: "https://t.me/arturlichkid",
+      link: "https://info.sensemakers.biz/newsletter_ai_0126",
     },
     {
       category: "Индивидуальная ИИ разработка",
@@ -33,11 +34,10 @@ export function TransformationSection() {
       link: "https://t.me/NazarovaWMT",
     },
     {
-      category: "Спецпроекты",
-      title: "SenseMakers",
-      description: "Прояснение сложных вызовов, доступ к сильной экспертной практике, больше смысла, меньше хаоса, сильнее курс в период перемен.",
+      category: "Партнерство",
+      title: "Сотрудничество на следующую ИИчницу",
       className: "col-span-1",
-      link: "https://info.sensemakers.biz/newsletter_ai_0126",
+      link: "https://t.me/arturlichkid",
     },
   ];
 
