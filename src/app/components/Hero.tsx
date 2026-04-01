@@ -73,7 +73,7 @@ export function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-3xl sm:text-4xl md:text-[80px] lg:text-[100px] leading-tight text-white/80 font-medium tracking-tight mt-2 md:mt-4"
+            className="text-3xl sm:text-4xl md:text-[80px] lg:text-[100px] leading-tight text-white font-medium tracking-tight mt-2 md:mt-4"
           >
             Как это было
           </Motion.h2>
