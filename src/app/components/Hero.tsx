@@ -64,7 +64,7 @@ export function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-[40px] sm:text-5xl md:text-[80px] leading-[1.1] font-medium tracking-tight flex flex-wrap justify-center gap-x-3 md:gap-x-4"
+            className="text-[40px] sm:text-5xl md:text-[100px] lg:text-[120px] leading-[1.1] font-medium tracking-tight flex flex-wrap justify-center gap-x-3 md:gap-x-4"
           >
             <span className="text-[#FF5331]">ИИЧНИЦА</span>
             <span className="text-white">SHOW</span>
@@ -73,7 +73,7 @@ export function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-3xl sm:text-4xl md:text-[80px] leading-tight text-white/80 font-medium tracking-tight mt-2 md:mt-4"
+            className="text-3xl sm:text-4xl md:text-[80px] lg:text-[100px] leading-tight text-white/80 font-medium tracking-tight mt-2 md:mt-4"
           >
             Как это было
           </Motion.h2>
