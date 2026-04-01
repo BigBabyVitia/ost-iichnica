@@ -58,7 +58,7 @@ const MOCK_SPEAKERS = [
 
 export function SummarySection() {
   return (
-    <section className="bg-zinc-950 py-24 md:py-32 px-6">
+    <section id="summary-section" className="bg-zinc-950 py-24 md:py-32 px-6">
       <div className="max-w-[1100px] mx-auto flex flex-col items-center text-center">
         <Motion.h2 
           initial={{ opacity: 0, y: 30 }}
@@ -121,11 +121,11 @@ function SpeakerCard({ speaker, index }: { speaker: any, index?: number }) {
       className="bg-[#1C1C1E] border border-white/5 p-3 md:p-4 flex flex-col w-full text-center rounded-[32px] relative z-0 h-full shadow-2xl"
     >
       {/* Image */}
-      <div className="w-full aspect-[4/3] md:aspect-[3/2] rounded-[24px] overflow-hidden mb-6 bg-zinc-900 shrink-0 flex items-center justify-center p-4">
+      <div className="w-full aspect-[4/3] md:aspect-[3/2] rounded-[24px] overflow-hidden mb-6 bg-zinc-900 shrink-0">
          <img 
            src={speaker.image} 
            alt={speaker.name} 
-           className="max-w-full max-h-full object-contain shadow-lg" 
+           className="w-full h-full object-cover shadow-lg" 
          />
       </div>
       

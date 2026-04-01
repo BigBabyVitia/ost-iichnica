@@ -94,10 +94,21 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto"
         >
-          <button className="bg-[#FF5331] hover:bg-[#e64627] text-white font-medium text-base sm:text-lg md:text-xl px-6 py-4 md:px-8 md:py-5 rounded-2xl transition-colors shrink-0">
+          <a 
+            href="https://surkoph.com/disk/31-03-2026-wmt-ai-ttc047"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#FF5331] hover:bg-[#e64627] text-white font-medium text-base sm:text-lg md:text-xl px-6 py-4 md:px-8 md:py-5 rounded-2xl transition-colors shrink-0 flex items-center justify-center decoration-0"
+          >
             Смотреть все фото
-          </button>
-          <button className="bg-zinc-100 hover:bg-white text-zinc-950 font-medium text-base sm:text-lg md:text-xl px-6 py-4 md:px-8 md:py-5 rounded-2xl transition-colors shrink-0">
+          </a>
+
+          <button 
+            onClick={() => {
+              document.getElementById('summary-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="bg-zinc-100 hover:bg-white text-zinc-950 font-medium text-base sm:text-lg md:text-xl px-6 py-4 md:px-8 md:py-5 rounded-2xl transition-colors shrink-0"
+          >
             Саммари выступлений
           </button>
         </Motion.div>

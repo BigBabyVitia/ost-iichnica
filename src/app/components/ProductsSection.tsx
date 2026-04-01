@@ -13,6 +13,7 @@ export function ProductsSection() {
         "Корпоративная платформа для управления работой с ИИ в компаниях. Объединяет ведущие модели LLM, ИИ-агентов и внутреннюю базу знаний бизнеса в единый безопасный рабочий контур, для повышения эффективности команд.",
       buttonText: "Узнать подробнее",
       image: neurokeyImg,
+      link: "https://neiroklyuch.ru/",
     },
     {
       title: "Relevanter",
@@ -20,6 +21,7 @@ export function ProductsSection() {
         "Ускоряет подбор персонала и снижает его стоимость. Автоматически подбирает кандидатов на HH.ru и в вашей базе, оценивает и объективно выбирает, ведет переписку, скрининг и доводит лучших до интервью.",
       buttonText: "Узнать подробнее",
       image: relevanterImg,
+      link: "https://relevanter.ru/",
     },
   ];
 
@@ -65,9 +67,14 @@ export function ProductsSection() {
                   {product.description}
                 </p>
                 <div>
-                  <button className="bg-[#FF5331] hover:bg-[#e64627] text-white font-medium text-lg px-8 py-4 rounded-xl transition-colors inline-flex items-center justify-center">
+                  <a 
+                    href={product.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#FF5331] hover:bg-[#e64627] text-white font-medium text-lg px-8 py-4 rounded-xl transition-colors inline-flex items-center justify-center decoration-0"
+                  >
                     {product.buttonText}
-                  </button>
+                  </a>
                 </div>
               </div>
             </Motion.div>
@@ -75,5 +82,6 @@ export function ProductsSection() {
         </div>
       </div>
     </section>
+
   );
 }
