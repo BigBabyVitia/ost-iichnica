@@ -15,14 +15,14 @@ export function TransformationSection() {
     },
     {
       category: "Деловое направление",
-      title: "WMT Kids",
+      title: "Оставить заявку в WMT Kids",
       description: "Развитие мышления, навыков и созидания. ИИ как среда практики, самовыражения и раскрытия потенциала ребёнка.",
       className: "col-span-1",
       link: "https://t.me/ynvrcoz",
     },
     {
       category: "Спецпроекты",
-      title: "SenseMakers",
+      title: "ИИ + PCM от Sensemakers",
       description: "Прояснение сложных вызовов, доступ к сильной экспертной практике, больше смысла, меньше хаоса, сильнее курс в период перемен.",
       className: "col-span-1",
       link: "https://info.sensemakers.biz/newsletter_ai_0126",
