@@ -4198,7 +4198,7 @@ function Frame117() {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-start not-italic relative shrink-0 w-full">
       <p className="font-['Inter_Display:Medium',sans-serif] leading-[40px] relative shrink-0 text-[32px] text-white w-full" style={{ fontFeatureSettings: "'cv09', 'ss11', 'calt' 0, 'liga' 0" }}>
-        Relevanter
+        Релевантер
       </p>
       <div className="flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-end leading-[0] relative shrink-0 text-[#cdd0d5] text-[18px] tracking-[-0.27px] w-full" style={{ fontFeatureSettings: "'cv09', 'ss11', 'calt' 0, 'liga' 0" }}>
         <p className="leading-[24px] mb-0">Ускоряет подбор персонала и снижает его стоимость.</p>

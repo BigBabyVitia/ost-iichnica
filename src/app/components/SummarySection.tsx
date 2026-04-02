@@ -9,7 +9,6 @@ import doronichevImg from "@/assets/speakers/Андрей Дороничев.png
 import markovImg from "@/assets/speakers/Сергей Марков.png";
 import savvateevImg from "@/assets/speakers/Алексей Савватеев.png";
 import nelyudovImg from "@/assets/speakers/Егор Нелюдов.png";
-import teamT1Img from "@/assets/speakers/Команда Т1.png";
 import shakirovImg from "@/assets/speakers/Равиль Шакиров.png";
 
 const MOCK_SPEAKERS = [
@@ -39,14 +38,9 @@ const MOCK_SPEAKERS = [
     image: savvateevImg,
   },
   {
-    name: "Егор Нелюдов",
-    title: "Участник проекта WMT Kids",
+    name: "WMT Kids",
+    title: "Участники проекта WMT Kids",
     image: nelyudovImg,
-  },
-  {
-    name: "Команда Т1",
-    title: "Команда разработчиков ИИ продуктов холдинга Т1",
-    image: teamT1Img,
   },
   {
     name: "Равиль Шакиров",
@@ -101,7 +95,7 @@ export function SummarySection() {
             />
           </Motion.div>
 
-          {/* Remaining 6 Cards */}
+          {/* Remaining Cards */}
           {MOCK_SPEAKERS.slice(2).map((speaker, index) => (
             <SpeakerCard key={index + 2} speaker={speaker} index={index + 2} />
           ))}
