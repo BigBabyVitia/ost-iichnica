@@ -439,7 +439,7 @@ function Container12() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Roboto_Flex:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#cdd0d5] text-[21.656px] whitespace-nowrap" style={{ fontVariationSettings: "'GRAD' 0, 'XOPQ' 96, 'XTRA' 468, 'YOPQ' 79, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'YTLC' 514, 'YTUC' 712, 'wdth' 100" }}>
-        <p className="leading-[30.938px]">ИИ + PCM от Sensemakers</p>
+        <p className="leading-[30.938px]">Развитие навыков коммуникации с Sensemakers</p>
       </div>
     </div>
   );

@@ -20,8 +20,8 @@ export function TransformationSection() {
     },
     {
       category: "Спецпроекты",
-      title: "ИИ + PCM от Sensemakers",
-      description: "Прояснение сложных вызовов, доступ к сильной экспертной практике, больше смысла, меньше хаоса, сильнее курс в период перемен.",
+      title: "Развитие навыков коммуникации с Sensemakers",
+      description: "Компетенции сотрудника будущего, практические шаги к ИИвизации без стресса",
       className: "col-span-1",
       link: "https://info.sensemakers.biz/newsletter_ai_0126",
     },

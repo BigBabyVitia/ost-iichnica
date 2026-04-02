@@ -8,7 +8,7 @@ import nakhapetyanImg from "@/assets/speakers/Гор Нахапетян.png";
 import doronichevImg from "@/assets/speakers/Андрей Дороничев.png";
 import markovImg from "@/assets/speakers/Сергей Марков.png";
 import savvateevImg from "@/assets/speakers/Алексей Савватеев.png";
-import nelyudovImg from "@/assets/speakers/Егор Нелюдов.png";
+import wmtKidsImg from "@/assets/speakers/wmt-kids.jpg";
 import shakirovImg from "@/assets/speakers/Равиль Шакиров.png";
 
 const MOCK_SPEAKERS = [
@@ -40,7 +40,7 @@ const MOCK_SPEAKERS = [
   {
     name: "WMT Kids",
     title: "Участники проекта WMT Kids",
-    image: nelyudovImg,
+    image: wmtKidsImg,
   },
   {
     name: "Равиль Шакиров",
