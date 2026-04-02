@@ -17,7 +17,7 @@ export function SocialSection() {
     {
       name: "Телеграм компании",
       icon: <Send className="w-5 h-5 text-white" strokeWidth={2} />,
-      link: "https://www.instagram.com/igor_nikitin_ai?igsh=dnZ4ZTA1ZW9jcjV5", // As provided by user
+      link: "https://t.me/wmtit",
     },
     {
       name: "Игорь Никитин",
