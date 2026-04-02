@@ -12,7 +12,7 @@ export function TransformationSection() {
       link: "https://wmt-landing.vercel.app/",
     },
     {
-      category: "Деловое направление",
+      category: "Детское направление",
       title: "Оставить заявку в WMT Kids",
       description: "Развитие мышления, навыков и созидания. ИИ как среда практики, самовыражения и раскрытия потенциала ребёнка.",
       className: "col-span-1",
