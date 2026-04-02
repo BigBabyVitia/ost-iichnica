@@ -18,7 +18,7 @@ export function Footer() {
         </p>
 
         <p className="text-neutral-500 text-sm">
-          © 2024 WMT AI
+          © 2026 WMT AI
         </p>
       </div>
     </footer>

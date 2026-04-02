@@ -100,7 +100,7 @@ export function Hero() {
             rel="noopener noreferrer"
             className="bg-[#FF5331] hover:bg-[#e64627] text-white font-medium text-base sm:text-lg md:text-xl px-6 py-4 md:px-8 md:py-5 rounded-2xl transition-colors shrink-0 flex items-center justify-center decoration-0"
           >
-            Смотреть все фото
+            Фотоотчет
           </a>
 
           <button 

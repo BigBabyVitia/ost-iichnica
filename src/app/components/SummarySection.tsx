@@ -16,36 +16,37 @@ const MOCK_SPEAKERS = [
     name: "Игорь Никитин",
     title: "Ведущий ИИЧНИЦА SHOW. Founder и CEO WMT AI, AI-трансформатор",
     image: nikitinImg,
+    summaryFile: "/summaries/Саммари_ИИЧНИЦА_SHOW_Игорь_Никитин.pdf",
   },
   {
     name: "Гор Нахапетян",
     title: "Сооснователь компании Sensemakers",
     image: nakhapetyanImg,
-  },
-  {
-    name: "Андрей Дороничев",
-    title: "ex-Google Product Director, Founder & CEO Optic",
-    image: doronichevImg,
+    summaryFile: "/summaries/Саммари_ИИЧНИЦА_SHOW_Гор_Нахапетян.pdf",
   },
   {
     name: "Сергей Марков",
     title: "Директор по развитию технологий ИИ, ПАО «Сбербанк»",
     image: markovImg,
+    summaryFile: "/summaries/Саммари_ИИЧНИЦА_SHOW_Сергей_Марков.pdf",
   },
   {
     name: "Алексей Савватеев",
     title: "Эксперт в математике, популяризатор науки",
     image: savvateevImg,
+    summaryFile: "/summaries/Саммари_ИИЧНИЦА_SHOW_Алексей_Савватеев.pdf",
   },
   {
     name: "WMT Kids",
     title: "Участники проекта WMT Kids",
     image: wmtKidsImg,
+    summaryFile: "/summaries/Саммари ИИЧНИЦА SHOW. WMT Kids.pdf",
   },
   {
     name: "Равиль Шакиров",
     title: "Руководитель направления технической аналитики Центра компетенций по ИИ",
     image: shakirovImg,
+    summaryFile: "/summaries/Саммари_ИИЧНИЦА_SHOW_Равиль_Шакиров.pdf",
   },
 ];
 
@@ -80,32 +81,49 @@ export function SummarySection() {
           {/* Card 2 */}
           <SpeakerCard speaker={MOCK_SPEAKERS[1]} index={1} />
           
-          {/* The 3D Man Illustration (Col 3, Row 1 on Desktop) */}
-          <Motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:flex items-end justify-center relative h-full w-full"
-          >
-            <img 
-              src={sittingManImg} 
-              alt="Спикер" 
-              className="w-auto h-[110%] max-w-none object-contain absolute bottom-0 z-10 pointer-events-none drop-shadow-2xl"
-            />
-          </Motion.div>
 
           {/* Remaining Cards */}
           {MOCK_SPEAKERS.slice(2).map((speaker, index) => (
             <SpeakerCard key={index + 2} speaker={speaker} index={index + 2} />
           ))}
         </div>
+
+        {/* Andrey Doronichev Summary Button - Hidden for now
+        <Motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-16 w-full max-w-[500px]"
+        >
+          <a
+            href="#"
+            onClick={(e) => {
+              if (e.currentTarget.getAttribute('href') === '#') {
+                e.preventDefault();
+                alert('Саммари Андрея Дороничева будет доступно скоро!');
+              }
+            }}
+            className="bg-[#1C1C1E] border border-white/10 hover:border-white/20 text-white font-medium p-2 rounded-full transition-all flex items-center group shadow-2xl"
+          >
+            <span className="flex-1 text-center text-lg md:text-xl py-2">Получить саммари Андрея Дороничева</span>
+            <div className="bg-[#FF5331] w-[52px] h-[52px] rounded-full flex items-center justify-center shrink-0 transition-transform group-hover:scale-105">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </div>
+          </a>
+        </Motion.div>
+        */}
       </div>
     </section>
   );
 }
 
 function SpeakerCard({ speaker, index }: { speaker: any, index?: number }) {
+  const isAvailable = !!speaker.summaryFile;
+
   return (
     <Motion.div 
       initial={{ opacity: 0, y: 10 }}
@@ -135,15 +153,35 @@ function SpeakerCard({ speaker, index }: { speaker: any, index?: number }) {
       
       {/* Action Button */}
       <div className="px-2 pb-2 mt-auto">
-        <button className="bg-[#09090B] border border-white/15 hover:border-white/30 text-white text-[16px] font-medium p-1.5 rounded-full transition-all w-full flex items-center group">
-          <span className="flex-1 text-left pl-4">Скачать саммари</span>
-          <div className="bg-[#FF5331] w-[44px] h-[44px] rounded-full flex items-center justify-center shrink-0 transition-transform group-hover:scale-105">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-              <line x1="7" y1="17" x2="17" y2="7" />
-              <polyline points="7 7 17 7 17 17" />
-            </svg>
-          </div>
-        </button>
+        {isAvailable ? (
+          <a 
+            href={speaker.summaryFile} 
+            download
+            className="bg-[#09090B] border border-white/15 hover:border-white/30 text-white text-[16px] font-medium p-1.5 rounded-full transition-all w-full flex items-center group no-underline"
+          >
+            <span className="flex-1 text-left pl-4">Скачать саммари</span>
+            <div className="bg-[#FF5331] w-[44px] h-[44px] rounded-full flex items-center justify-center shrink-0 transition-transform group-hover:scale-105">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </div>
+          </a>
+        ) : (
+          <button 
+            disabled 
+            className="bg-[#09090B]/50 border border-white/5 text-white/30 text-[16px] font-medium p-1.5 rounded-full w-full flex items-center cursor-not-allowed"
+          >
+            <span className="flex-1 text-left pl-4">Скоро будет</span>
+            <div className="bg-zinc-800 w-[44px] h-[44px] rounded-full flex items-center justify-center shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            </div>
+          </button>
+        )}
       </div>
     </Motion.div>
   );
