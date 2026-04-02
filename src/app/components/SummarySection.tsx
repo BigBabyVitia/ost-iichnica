@@ -46,7 +46,7 @@ const MOCK_SPEAKERS = [
     name: "Равиль Шакиров",
     title: "Руководитель направления технической аналитики Центра компетенций по ИИ",
     image: shakirovImg,
-    summaryFile: "/summaries/Саммари_ИИЧНИЦА_SHOW_Равиль_Шакиров.pdf",
+    summaryFile: "/summaries/Industrial_Immunity Шакиров.pdf",
   },
 ];
 
@@ -71,8 +71,7 @@ export function SummarySection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-lg md:text-[17px] text-neutral-300 max-w-[650px] mb-16 leading-relaxed opacity-80"
         >
-          Тут что то придумать, по типу собрали все материалы и подготовили
-          отчеты в удобном формате, в этом духе короче
+          Собрали все материалы и подготовили отчеты в удобном формате
         </Motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full auto-rows-fr">

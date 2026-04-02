@@ -75,7 +75,7 @@ export function SocialSection() {
               <div className="bg-[#2D2D2D] group-hover:bg-[#FF5331] transition-colors w-12 h-12 rounded-full flex items-center justify-center shrink-0 mr-5">
                 {social.icon}
               </div>
-              <span className="text-white text-lg font-medium">
+              <span className="text-white text-lg font-medium text-left">
                 {social.name}
               </span>
             </Motion.a>
