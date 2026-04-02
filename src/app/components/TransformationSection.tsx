@@ -44,19 +44,19 @@ export function TransformationSection() {
     <section className="bg-zinc-950 py-24 md:py-32 px-6">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
         <Motion.h2 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6"
         >
           От инсайтов к практике
         </Motion.h2>
         <Motion.p 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-lg md:text-xl text-neutral-400 max-w-3xl mb-12 leading-relaxed whitespace-pre-wrap"
         >
           Здесь собраны направления, в которых интерес к ИИ превращается в развитие, новые возможности и ощутимую пользу — для людей, команд и будущего.
@@ -69,10 +69,10 @@ export function TransformationSection() {
 
             return (
               <Motion.a
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 key={index}
                 href={card.link || "#"}
                 target={card.link ? "_blank" : undefined}

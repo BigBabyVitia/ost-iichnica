@@ -42,10 +42,10 @@ export function ProductsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
           {products.map((product, index) => (
             <Motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               key={index}
               className="bg-transparent flex flex-col"
             >

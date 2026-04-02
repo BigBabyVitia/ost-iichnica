@@ -55,19 +55,19 @@ export function SummarySection() {
     <section id="summary-section" className="bg-zinc-950 py-24 md:py-32 px-6">
       <div className="max-w-[1100px] mx-auto flex flex-col items-center text-center">
         <Motion.h2 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-4xl md:text-[44px] font-medium tracking-tight text-white mb-5"
         >
           Саммари всех выступлений
         </Motion.h2>
         <Motion.p 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-lg md:text-[17px] text-neutral-300 max-w-[650px] mb-16 leading-relaxed opacity-80"
         >
           Тут что то придумать, по типу собрали все материалы и подготовили
@@ -108,10 +108,10 @@ export function SummarySection() {
 function SpeakerCard({ speaker, index }: { speaker: any, index?: number }) {
   return (
     <Motion.div 
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index !== undefined ? Math.min(index * 0.1, 0.5) : 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className="bg-[#1C1C1E] border border-white/5 p-3 md:p-4 flex flex-col w-full text-center rounded-[32px] relative z-0 h-full shadow-2xl"
     >
       {/* Image */}
