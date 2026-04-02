@@ -26,7 +26,7 @@ export function TransformationSection() {
       link: "https://info.sensemakers.biz/newsletter_ai_0126",
     },
     {
-      category: "Индивидуальная ИИ разработка",
+      category: "Заказная разработка",
       title: "Индивидуальная ИИ разработка",
       className: "col-span-1 md:row-span-2",
       link: "https://t.me/NazarovaWMT",
