@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSearchParams } from "react-router";
 import { LogoIichnitsa, LogoWMTAI } from "./Logos";
 import { motion as Motion, AnimatePresence } from "motion/react";
 
@@ -11,6 +12,8 @@ const HERO_IMAGES = [hero1, hero2, hero3];
 
 export function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [searchParams] = useSearchParams();
+  const status = searchParams.get("status");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -18,6 +21,8 @@ export function Hero() {
     }, 5000); // 5 seconds per slide
     return () => clearInterval(timer);
   }, []);
+
+  const isAbsent = status === "absent";
 
   return (
     <section className="relative w-full min-h-[90vh] flex flex-col overflow-hidden bg-zinc-950">
@@ -85,7 +90,11 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-6 md:mt-8 text-base sm:text-lg md:text-2xl text-white/80 leading-relaxed font-medium max-w-[950px]"
         >
-          Спасибо, что посетили наше мероприятие ИИЧНИЦА SHOW! Надеемся, что наш уникальный формат и энергетика WMT AI зарядили вас на ИИ-трансформацию, ведь это наша главная задача!
+          {isAbsent ? (
+            "Жаль, что вы не смогли быть с нами на ИИчнице. Чтобы вы ничего не потеряли, мы собрали на одной странице саммари выступлений, фотографии и основные итоги вечера."
+          ) : (
+            "Спасибо, что посетили наше мероприятие ИИЧНИЦА SHOW! Надеемся, что наш уникальный формат и энергетика WMT AI зарядили вас на ИИ-трансформацию, ведь это наша главная задача!"
+          )}
         </Motion.p>
 
         <Motion.div 
