@@ -16,37 +16,37 @@ const MOCK_SPEAKERS = [
     name: "Игорь Никитин",
     title: "Ведущий ИИЧНИЦА SHOW. Founder и CEO WMT AI, AI-трансформатор",
     image: nikitinImg,
-    summaryFile: "/summaries/Саммари_ИИЧНИЦА_SHOW_Игорь_Никитин.pdf",
+    summaryFile: "/summaries/summary_nikitin.pdf",
   },
   {
     name: "Гор Нахапетян",
     title: "Сооснователь компании Sensemakers",
     image: nakhapetyanImg,
-    summaryFile: "/summaries/Саммари_ИИЧНИЦА_SHOW_Гор_Нахапетян.pdf",
+    summaryFile: "/summaries/summary_nakhapetyan.pdf",
   },
   {
     name: "Сергей Марков",
     title: "Директор по развитию технологий ИИ, ПАО «Сбербанк»",
     image: markovImg,
-    summaryFile: "/summaries/Саммари_ИИЧНИЦА_SHOW_Сергей_Марков.pdf",
+    summaryFile: "/summaries/summary_markov.pdf",
   },
   {
     name: "Алексей Савватеев",
     title: "Эксперт в математике, популяризатор науки",
     image: savvateevImg,
-    summaryFile: "/summaries/Саммари_ИИЧНИЦА_SHOW_Алексей_Савватеев.pdf",
+    summaryFile: "/summaries/summary_savvateev.pdf",
   },
   {
     name: "WMT Kids",
     title: "Участники проекта WMT Kids",
     image: wmtKidsImg,
-    summaryFile: "/summaries/Саммари ИИЧНИЦА SHOW. WMT Kids.pdf",
+    summaryFile: "/summaries/summary_kids.pdf",
   },
   {
     name: "Равиль Шакиров",
     title: "Руководитель направления технической аналитики Центра компетенций по ИИ",
     image: shakirovImg,
-    summaryFile: "/summaries/Industrial_Immunity Шакиров.pdf",
+    summaryFile: "/summaries/summary_shakirov.pdf",
   },
 ];
 
@@ -155,7 +155,7 @@ function SpeakerCard({ speaker, index }: { speaker: any, index?: number }) {
         {isAvailable ? (
           <a 
             href={speaker.summaryFile} 
-            download
+            download={`${speaker.name}_Саммари.pdf`}
             className="bg-[#09090B] border border-white/15 hover:border-white/30 text-white text-[16px] font-medium p-1.5 rounded-full transition-all w-full flex items-center group no-underline"
           >
             <span className="flex-1 text-left pl-4">Скачать саммари</span>
